@@ -12,9 +12,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
-|users_id|integer|null: false, foreign_key: true|
+|title|string|null: false|
 ### Association
 - has_many :users  through:  :groups_users
 - has_many :groups_users
@@ -23,19 +21,19 @@
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 ## messegesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |image|text|null: false|
-|users_id|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
