@@ -2,20 +2,20 @@
   .chat-main__group
     .chat-main__group__left
       チームC
-      .chat-main__group__member
+      .chat-main__group__left__member
         Member:名前
     .chat-main__group__edit
       Edit
   .chat-main__message
     .chat-main__message__talker
       名前
-      .chat-main__message__data
+      .chat-main__message__talker__data
         2019/12/13
     .chat-main__message__text
       talk
   .chat-main__form
-    .chat-main__from__comment
-      %input.login-input-text{:name => "type a message", :placeholder => "type a message",}/
+    .chat-main__form__comment
+      %input.chat-main__form__comment__image{name: "type a message", placeholder: "type a message",}/
       .chat-main__form__image
         %label{class: "input-box__image"}
           = icon('fas', 'image')
