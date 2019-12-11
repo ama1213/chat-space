@@ -1,0 +1,15 @@
+.chat-side
+  .side-header
+    .side-header__user-name
+      名前
+    .side-header__edit-user
+      = link_to "#" , class: "white" do
+        = icon('fas','edit')
+      %span<>
+      = link_to "#" , class: "white"do
+        = icon('fas','cog')
+  .groups
+    .groups-name
+      チームC
+    .groups-message
+      message
