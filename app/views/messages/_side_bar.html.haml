@@ -1,12 +1,12 @@
 .chat-side
   .side-header
     .side-header__user-name
-      名前
+      = current_user.name
     .side-header__edit-user
       = link_to "#" , class: "white" do
         = icon('fas','edit')
       %span<>
-      = link_to "#" , class: "white"do
+      = link_to edit_user_path(current_user) , class: "white" do
         = icon('fas','cog')
   .groups
     .groups-name
