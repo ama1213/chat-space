@@ -102,26 +102,24 @@
   width: 300px;
   float: left;
   padding: 0 20px;
-  background-color: #253141;
+  background-color: #333333;
   font-weight: bold;
   .side-header{
     height: 100px;
     display: flex;
     align-items: center;
     position: relative;
-    &__user-name{
+    &__name{
       font-size: 16px;
       float: left;
     }
-    &__edit-user{
+    &__lists{
       position: absolute;
       right: 0;
-      .white{
+      li{
+        margin-left: 5px;
         text-decoration: none;
         color: white;
-      }
-      span {
-        margin-left: 5px;
       }
     }
   }
@@ -133,13 +131,14 @@
     margin-left: -20px;
     padding: 20px 20px;
     font-weight: bold;
-    &-name{
-      font-size: 15px;
-    }
-    &-message{
-      font-size: 11px;
-      padding: 5px;
+    .group{
+      &-name{
+        font-size: 15px;
+      }
+      &-message{
+        font-size: 11px;
+        padding: 5px;
+      }
     }
   }
 }
-  
