@@ -31,21 +31,26 @@
       float: right;
       padding: 0 20px;
       margin: 28px 0 0;
-      color: #38aef3;
       border: solid 1px #38aef3;
       line-height: 40px;
+      a{
+      text-decoration: none;
+      color: #38aef3;
+      }
     }
   }
   .chat-main__message{
     background-color: #fafafa;
     height: calc(100% - 190px);
     padding: 35px 40px;
-    &__talker{
-      font-size: 16px;
-      color: #333333;
-      padding: 0 0 12px;
+    &__box{
       display: flex;
-      justify-content: flex-start;
+      &__talker{
+        font-size: 16px;
+        color: #333333;
+        padding: 0 0 12px;
+        justify-content: flex-start;
+      }
       &__data{
         font-size: 12px;
         color: #999999;
@@ -64,27 +69,32 @@
     padding: 20px 40px;
     display: flex;
     align-items: center;
+    .new_message{
+      display: flex;
+      width: 100%;
+    }
     &__comment{
       height: 50px;
       width: 100%;
-      position: relative;
-      &__image{
+      display: flex;
+      background-color: #ffffff;
+      padding-right: 20px;
+      &__text{
         padding: 0 40px 0 10px;
         width: 100%;
         height:50px;
         font-size: 20px;
         border-style: none;
       }
-    }
       &__image{
-        position: absolute;
-        top: 17px;
+        padding: 15px;
         right: 10px;
-        .exit{
-          display: none;
+        input{
+        display: none;
         }
       }
-    &__send{
+    }
+    &__submit{
       background-color: #38aef0;
       color: white;
       width: 100px;
@@ -93,7 +103,6 @@
       margin-left: 15px;
       line-height: 50px;
     }
-    
   }
 }
 
@@ -102,7 +111,7 @@
   width: 300px;
   float: left;
   padding: 0 20px;
-  background-color: #333333;
+  background-color: #253141;
   font-weight: bold;
   .side-header{
     height: 100px;
@@ -116,10 +125,13 @@
     &__lists{
       position: absolute;
       right: 0;
-      li{
-        margin-left: 5px;
-        text-decoration: none;
-        color: white;
+      display: flex;
+    }
+    li{
+      margin-left: 5px;
+      text-decoration: none;
+      i{
+        color: #ffffff;
       }
     }
   }
@@ -132,12 +144,18 @@
     padding: 20px 20px;
     font-weight: bold;
     .group{
-      &-name{
-        font-size: 15px;
-      }
-      &-message{
-        font-size: 11px;
-        padding: 5px;
+      margin-bottom: 40px;
+      a{
+        text-decoration: none;
+        .group-name{
+          font-size: 15px;
+          color: #fafafa;
+        }
+        .group-message{
+          font-size: 11px;
+          padding: 5px;
+          color: #fafafa;
+        }
       }
     }
   }
