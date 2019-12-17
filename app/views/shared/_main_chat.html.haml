@@ -1,24 +1,23 @@
 .main
   .chat-main__group
     .chat-main__group__left
-      チームC
+      = @group.name
       .chat-main__group__left__member
-        Member:名前
+        Menber :
+        - @group.users.each do |user|
+          = user.name
     .chat-main__group__edit
-      Edit
+      = link_to edit_group_path(@group) do
+        Edit
+
   .chat-main__message
-    .chat-main__message__talker
-      名前
-      .chat-main__message__talker__data
-        2019/12/13
-    .chat-main__message__text
-      talk
+    = render @messages
+
   .chat-main__form
-    .chat-main__form__comment
-      %input.chat-main__form__comment__image{name: "type a message", placeholder: "type a message",}/
-      .chat-main__form__image
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file",class: "exit"}
-    .chat-main__form__send
-      Send
+    = form_for [@group, @message] do |f|
+      .chat-main__form__comment
+        = f.text_field :content, class: 'chat-main__form__comment__text', placeholder: 'type a message'
+        = f.label :image, class: 'chat-main__form__comment__image' do
+          %i.fa.fa-image
+            = f.file_field :image
+      = f.submit "Send", class: "chat-main__form__submit"
