@@ -40,6 +40,7 @@
     }
   }
   .chat-main__message{
+    overflow: scroll;
     background-color: #fafafa;
     height: calc(100% - 190px);
     padding: 35px 40px;
