@@ -70,6 +70,7 @@ $('#new_message').on('submit', function(e){
      $('.chat-main__message').append(html);
      $('.chat-main__message').animate({scrollTop: $('.chat-main__message')[0].scrollHeight}, 'fast');   
      $('form')[0].reset();
+     $('.chat-main__form__submit').prop('disabled', false)
    })
     .fail(function(){
       alert('error');
